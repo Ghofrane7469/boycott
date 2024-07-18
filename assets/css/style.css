@@ -1,3 +1,57 @@
-.list{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.preloader {
+    background-color: whitesmoke;
+    height: 100vh;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader.enter_pre {
+    display: none;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    animation: animate 4s infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Ajout de styles pour le texte */
+h1, p {
+    color: #333; /* Assurez-vous que la couleur du texte est lisible */
     text-align: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: gray;
 }

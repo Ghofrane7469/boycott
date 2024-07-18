@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="d-flex justify-content-center mt-5 py-5">
+        <form class="shadow-lg p-5" action="index.php" method="POST">
+            <h4 class="text-center">Update User</h4>
+            <input type="hidden" name="id" value="<?=$user['id']?>">
+            <div class="mb-2">
+                <input type="text" placeholder="Nom" name="nom" class="form-control <?=array_key_exists("nom",$errors) ? 'is-invalid' : ''?> " value="<?php echo $user['nom']?>" >
+                <small class="text-danger"><?= array_key_exists("nom", $errors) ? $errors['nom'] : '' ?></small>
+            </div>
+            <div class="mb-2">
+                <input type="text" placeholder="prenom" name="prenom" class="form-control <?=array_key_exists("prenom",$errors) ? 'is-invalid' : ''?>"  value="<?=$user['prenom']?>">
+                <small class="text-danger"><?= array_key_exists("prenom", $errors) ? $errors['prenom'] : '' ?></small>
+            </div>
+            <div class="mb-2">
+                <input type="email" placeholder="Email" name="email" class="form-control <?=array_key_exists("email",$errors) ? 'is-invalid' : ''?>" value="<?=$user['email']?>">
+                <small class="text-danger"><?= array_key_exists("email", $errors) ? $errors['email'] : '' ?></small>
+            </div>
+            <div class="mb-2 text-center">
+                <button type="submit" name="submit" class="btn btn-outline-warning">Update</button>
+            </div>
+        </form>
+    </div>
+</div>
